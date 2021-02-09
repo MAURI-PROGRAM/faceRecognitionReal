@@ -1,0 +1,12 @@
+{
+    "type": "service_account",
+    "project_id": "ir-pre-produccion-cognitividad",
+    "private_key_id": "d15ad553764259d8e6b6adfa97e87f7c996d410a",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDTrB/0SZ0ppIJy\n4K2xRd1W7iQxA/bj/MQa38yQXObgTnMwpSwrr6CXW51jMIr221QSHTQQKLGXRJsB\nav9flvtrdaAZ4pc+0svE9LZQknx6S+ASPHH3D7w+o40AAw/DXFKEp6N6BujsCOpv\nZFj2xd8po27CYghV5yGWzoGm+XGbcbRqAYij1GJFvszLcT33jpu+5S1X3gD6T/Rl\n96OX/SSn6aHmH+pXxVrzJuqGJwPf/71kWGIoiSh82n2KYHLWz6xcYinz25EBiyPA\n46qqJrvEeU9ayIYD+q3tZB4yWslO8L7jFakZMAQPOY3IlUH4q8cMl77OZ8waCjdN\nTEOlwXqzAgMBAAECggEAZ9rM9tPje5oOswSP1CmeNtezBCWYzjWnljP2L2KVmLqF\nA/oWmPybw4ecyhz4IbRtJFIVyFPfBoQPtXtk/uaaRxg4TFsDsDxG5ETY6uFkl7CA\nqRHlLL4Ys3cVaEsYQdcbWaDSsb2QLLcXJz5J9BITs19PqanlwxgbP93keSNsXUJh\nK1BPO2jF6hKVVN4HtHP5kBjb61AvV/7mjNcplg6PiJ7q+7t6hUoB2k6wO5RHddWh\nbagk0qNNw43fjvh7/beFfSCRFaZLy3DmTd6ykvYtL95vs4gSrbx8IXyg9FOVUu46\n4T43jxlKgigMTWIxJd7tos3HeNapsRIcP+n7igeV4QKBgQDvCdrKWVqSPTKnmXQp\nxLqi+wunBzRatDoVW8q7o/bRM0OiEdBDFy4bAPwFEaHsV3UNi21kxy0tbZ3hDkw8\naiYSRmJIrVM2CEfJkNT+fU66bx3Si2oy2qDvInt7YRC8ClgGcORoY9vW1R021Yug\nbHs0xWXR6u1U0GEdIFDejIKlQwKBgQDisSnBoQZKI6DXgQTWNPrrQQAItMTbQXU4\nlYbX0ErouSMXs1TJVEBZfeDl/pEvXnb/BYNqZeNq3v5L1B/H5vZG4DQjHWimPkJk\nF/VBkPgCTeqbEluXp8DEb/++mnJU3niGpL0g+r7rNQr0yAq7w53cqfghjnkZr+9L\nshZhbaTF0QKBgFCQObVJOEVhatkh1wzcySp1AhBhVTvc0lawgTuMn3sSlBDjgBWc\nkmV3h3kN4E0PjNvrygrVNlzBPRzE/Ny/yeUO48Eq6Yikcc11itPa19Xt7VcwtbI+\nDU+Lh6KlrEY0FkbVdaXZQha97QK2JkEDTuMSRKbjTunu8UwnwBnBsaaRAoGBALcz\nvi9B1zdre70uA56pym79ZO2kScN4Lye/j+4x45gYpwesYkUi1a59UJgPF35UtY58\nAiymkxf3h0P49oYzXa0B3KDUT5KqljUWN5r5cbVLCuKv/12csOkQKnr7jpKQCI+n\n60EP4+NqRqR0VlhQSu/eXS2hWrUrvhRKpFOwrI1BAoGAGaIkPGLg5Cj+kGp5dkTU\nCXU5dNq/HauXdjuaAFIHjzqlQvaa/8vrA1qJL/uG3rZmJYPf4FP4BKDM1LJzwQen\njPW/5la26qR0FD8qVg9pYlQVCpjhrdvYPEymVRV9uUfSrJM4/LkxGrbwdY+Zox8H\njIOfGo/c3k//fDDNibF00hw=\n-----END PRIVATE KEY-----\n",
+    "client_email": "firebase-adminsdk-t38hy@ir-pre-produccion-cognitividad.iam.gserviceaccount.com",
+    "client_id": "115978204017384889429",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-t38hy%40ir-pre-produccion-cognitividad.iam.gserviceaccount.com"
+  }
