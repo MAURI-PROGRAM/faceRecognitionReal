@@ -30,7 +30,7 @@ namespace Api_face_recognition.Controllers
         }
 
         [HttpPost]
-        //[Authorize]
+        [Authorize]
         public  async Task<IActionResult> FaceCompare(string IMAGE_URL1, string IMAGE_URL2)
         {
             try
