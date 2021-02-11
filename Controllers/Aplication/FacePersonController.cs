@@ -35,11 +35,11 @@ namespace Api_face_recognition.Controllers
         }
 
         [HttpPost]
-        //[Authorize]
-        public  async Task<IActionResult> FacePerson (List<IFormFile> files)
+        [Authorize]
+        public  async Task<IActionResult> FacePerson (List<IFormFile> files, Double umbral)
         {
             try{
-                if(files.Count> 1){
+                if(files.Count> 1 & umbral > 0 &  umbral < 0.5 ){
                     int isEyesBlink = 0;
                     int notEyesBlink = 0;
                     Boolean EyeBlink = true;
@@ -60,7 +60,7 @@ namespace Api_face_recognition.Controllers
                             {
                                 List<DetectedFace> facesDetected = await _cognitivevision.DetectFaceRecognizeStream(imageFileStream, RecognitionModel.Recognition03);
                                 if(facesDetected.Count != 1 ){ throw new ArgumentException("Una de las fotos contiene ninguna o mas de una cara."); }
-                                EyeBlink = _cognitivevision.EyesBlink(facesDetected);
+                                EyeBlink = _cognitivevision.EyesBlink(facesDetected, umbral);
                                 isEyesBlink = EyeBlink?isEyesBlink+1:isEyesBlink;
                                 notEyesBlink = !EyeBlink?notEyesBlink+1:notEyesBlink;
 
@@ -79,14 +79,14 @@ namespace Api_face_recognition.Controllers
                                 bool saveFirebase = await _firebase.SaveObject("face-reconigtion",dataObject1);
                             }
                         } else{
-                            return new ObjectResult(new { error = "Error al parpadear" }) { StatusCode = 500};
+                            throw new ArgumentException("Error al parpadear");
                         }
                     }
                     Boolean HayPersona = isEyesBlink>0 && notEyesBlink>0;
                     
                     return new ObjectResult(new { HayPersona , urlPhotos }) { StatusCode = 200};
                 }else{
-                    throw new ArgumentException("Se necesita almenos dos fotos para realizar este proceso.");
+                    throw new ArgumentException("Se necesita almenos dos fotos para realizar este proceso, el umbral debe ser mayor a 0 y menor a 0.5");
                 }
                 
             }
