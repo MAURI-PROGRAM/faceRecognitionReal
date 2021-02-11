@@ -44,10 +44,12 @@ namespace Api_face_recognition.Controllers
                     int notEyesBlink = 0;
                     Boolean EyeBlink = true;
                     Boolean CapturePhoto = false;
-                    string urlPhotos = "deteccion de parpadeo"  ;
+                    string urlPhotos = "deteccion de parpadeo" ;
+                    int counter = 0;
                     
                     foreach (var formFile in files)
                     {
+                        counter ++;
                         if (formFile.Length > 0){
 
                             var filePath = Path.GetTempFileName();
@@ -64,7 +66,7 @@ namespace Api_face_recognition.Controllers
                                 isEyesBlink = EyeBlink?isEyesBlink+1:isEyesBlink;
                                 notEyesBlink = !EyeBlink?notEyesBlink+1:notEyesBlink;
 
-                                if( !CapturePhoto && !EyeBlink){
+                                if( !CapturePhoto && !EyeBlink || counter==files.Count){
                                     BlobContainerClient container = new BlobContainerClient(_azureStorage.ConnectionString, _azureStorage.ContainerName);
                                     string fileName = DateTime.Now.ToString("MMddyyyyHHmmssff") + formFile.FileName;
                                     BlobClient blob = container.GetBlobClient(fileName);
