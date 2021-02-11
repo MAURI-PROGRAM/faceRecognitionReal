@@ -14,6 +14,6 @@ namespace Api_face_recognition.Services
         Task<List<DetectedFace>> DetectFaceRecognize( string url, string recognition_model);
         Task<List<DetectedFace>> DetectFaceRecognizeStream( Stream stream, string recognition_model);
         Task<VerifyResult> VerifyTwoFaces( Guid FaceId1, Guid FaceId2);
-        Boolean EyesBlink( List<DetectedFace> facesDetected );
+        Boolean EyesBlink( List<DetectedFace> facesDetected , Double EYE_AR_THRESH);
     }
 }
