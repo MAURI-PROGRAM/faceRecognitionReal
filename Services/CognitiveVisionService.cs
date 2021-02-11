@@ -45,7 +45,7 @@ namespace Api_face_recognition.Services
             return verifyObjectResult;
         }
 
-        public  Boolean EyesBlink( List<DetectedFace> facesDetected )
+        public  Boolean EyesBlink( List<DetectedFace> facesDetected , Double EYE_AR_THRESH)
         {
             var facelandmarks = facesDetected[0].FaceLandmarks;
                     Double  difLeftX = Math.Sqrt(
@@ -64,7 +64,6 @@ namespace Api_face_recognition.Services
                     
                     Double leftEAR = difLeftY / difLeftX;
                     Double rightEAR = difRightY/difRightX;
-                    Double EYE_AR_THRESH = 0.3;
                     bool leftBlink = leftEAR < EYE_AR_THRESH;
                     bool rightBlink = rightEAR < EYE_AR_THRESH;
             return leftBlink || rightBlink;
