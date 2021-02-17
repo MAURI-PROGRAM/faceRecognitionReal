@@ -27,6 +27,9 @@ namespace Api_face_recognition.Configurations
             
             services.Configure<FirebaseConfiguration>(
                 configuration.GetSection(AppSettingsSections.Firebase));
+
+            services.Configure<CustomVisionConfiguration>(
+                configuration.GetSection(AppSettingsSections.CustomVision));
         }
     }
 }
