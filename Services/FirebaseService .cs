@@ -68,6 +68,15 @@ namespace Api_face_recognition.Services
             return dataObject;
         }
 
+        public  Dictionary<string, object> TransformObjectDetection(string Id, string predictions)
+        {
+            Dictionary<string, object> dataObject = new Dictionary<string, object>();
+            dataObject.Add("fecha",DateTime.UtcNow);
+            dataObject.Add("Id",Id);
+            dataObject.Add("predictions", predictions);
+            return dataObject;
+        }
+
 
     }
 }
