@@ -13,8 +13,10 @@ namespace Api_face_recognition.DependencyInjection
             var serviceProvider = services.BuildServiceProvider();
             var azureCognitive = serviceProvider.GetService<IOptions<AzureCognitiveConfiguration>>().Value;
             var firebase = serviceProvider.GetService<IOptions<FirebaseConfiguration>>().Value;
+            var customvision = serviceProvider.GetService<IOptions<CustomVisionConfiguration>>().Value;
             services.AddSingleton<ICognitiveVisionService>(sp => new CognitiveVisionService(azureCognitive.EndPoint, azureCognitive.SubscriptionKey));
             services.AddSingleton<IFirebaseService>(sp => new FirebaseService(firebase.File,firebase.Credential,firebase.Collection));
+            services.AddSingleton<ICustomVisionService>(sp => new CustomVisionService(customvision.PredictionKey,customvision.Url));
         }
     }
 }
