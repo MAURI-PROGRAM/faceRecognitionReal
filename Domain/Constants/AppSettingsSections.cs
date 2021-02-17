@@ -23,5 +23,11 @@ namespace Api_face_recognition.Domain
         /// Firebase Configurations
         /// </summary>
         public static string Firebase = nameof(Firebase);
+
+
+        /// <summary>
+        /// Custom Vision Configurations
+        /// </summary>
+        public static string CustomVision = nameof(CustomVision);
     }
 }
